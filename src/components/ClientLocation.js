@@ -780,7 +780,12 @@ const ClientLocation = () => {
 
   // Setup socket connection
   const initializeSocket = (driverId) => {
-    socket.current = io("https://location-backend-production-058e.up.railway.app/");
+    // socket.current = io("https://location-backend-production-058e.up.railway.app/");
+      socket.current = io("https://location-backend-production-058e.up.railway.app", {
+  transports: ["websocket"],       // ✅ Force WebSocket only
+  withCredentials: true            // ✅ Allow credentials for CORS
+});
+
 
     socket.current.on("connect", () => {
       console.log("✅ Client connected to WebSocket server");
