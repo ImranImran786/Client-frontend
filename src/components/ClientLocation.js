@@ -17,7 +17,7 @@
 
 //     useEffect(() => {
 //         // WebSocket for receiving location updates
-//         const socketInstance = io("http://localhost:5000/");
+//         const socketInstance = io("https://location-backend-production-058e.up.railway.app//");
 //         socketInstance.on("client-receive-location", (location) => {
 //             console.log("Received Driver Location in Client App:", location);
 //             if (location && typeof location.latitude === "number" && typeof location.longitude === "number") {
@@ -184,10 +184,10 @@
 //       }).addTo(mapRef.current);
 //     }
 
-//     // socket.current = io("http://localhost:5000/");
+//     // socket.current = io("https://location-backend-production-058e.up.railway.app//");
 //     // adminSocket.current = io("ws://localhost:5005/admin");
 //     // const SERVER_URL = "ws://https://database-production-3a68.up.railway.app/"; // Change this to your Railway deployment URL in production
-// socket.current = io("http://localhost:5000/");
+// socket.current = io("https://location-backend-production-058e.up.railway.app//");
 // adminSocket.current = io("https://database-production-3a68.up.railway.app/admin");
 
 //     socket.current.on("connect", () => {
@@ -512,7 +512,7 @@
 //       }).addTo(mapRef.current);
 //     }
 
-//     socket.current = io("http://localhost:5000/");
+//     socket.current = io("https://location-backend-production-058e.up.railway.app//");
 
 //     socket.current.on("connect", () => {
 //       console.log("Connected to WebSocket server");
@@ -654,7 +654,7 @@
 
 //   // STEP 3: Setup Socket.IO
 //   const setupSocket = (driverId) => {
-//     socket.current = io("http://localhost:5000/client");
+//     socket.current = io("https://location-backend-production-058e.up.railway.app//client");
 
 //     socket.current.on("connect", () => {
 //       console.log("✅ Connected to WebSocket server as client");
@@ -780,7 +780,7 @@ const ClientLocation = () => {
 
   // Setup socket connection
   const initializeSocket = (driverId) => {
-    socket.current = io("http://localhost:5000");
+    socket.current = io("https://location-backend-production-058e.up.railway.app/");
 
     socket.current.on("connect", () => {
       console.log("✅ Client connected to WebSocket server");
@@ -1026,7 +1026,7 @@ export default ClientLocation;
 //       }).addTo(mapRef.current);
 //     }
 
-//     socket.current = io("http://localhost:5000/");
+//     socket.current = io("https://location-backend-production-058e.up.railway.app//");
 
 //     socket.current.on("connect", () => {
 //       console.log("Connected to WebSocket server");
@@ -1044,7 +1044,7 @@ export default ClientLocation;
 
 //   // Step 3: Setup WebSocket connection and listen for location updates
 //   // const setupSocket = (driverId) => {
-//   //   socket.current = io("http://localhost:5000");
+//   //   socket.current = io("https://location-backend-production-058e.up.railway.app/");
 
 //   //   socket.current.on("connect", () => {
 //   //     console.log("✅ Client connected to WebSocket server");
