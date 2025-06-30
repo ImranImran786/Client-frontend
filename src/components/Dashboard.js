@@ -189,8 +189,7 @@ const Dashboard = () => {
                                 Driver Location
                             </Link>
                         </li>
-                        // <li><button className="logout-button" onClick={handleLogout}>Logout</button></li>
-                    </ul>
+                        </ul>
                 </aside>
 
                 {/* Main Content */}
