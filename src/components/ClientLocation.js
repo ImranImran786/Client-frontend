@@ -34,7 +34,7 @@
 //     }, []);
 
 //     useEffect(() => {
-//         const newSocket = io("http://localhost:5005/client", {
+//         const newSocket = io("https://mongo-db-backend-production.up.railway.app/client", {
 //             reconnection: true,
 //             reconnectionAttempts: 10,
 //             reconnectionDelay: 3000
@@ -186,9 +186,9 @@
 
 //     // socket.current = io("http://localhost:5000/");
 //     // adminSocket.current = io("ws://localhost:5005/admin");
-//     // const SERVER_URL = "ws://http://localhost:5005/"; // Change this to your Railway deployment URL in production
+//     // const SERVER_URL = "ws://https://mongo-db-backend-production.up.railway.app/"; // Change this to your Railway deployment URL in production
 // socket.current = io("http://localhost:5000/");
-// adminSocket.current = io("http://localhost:5005/admin");
+// adminSocket.current = io("https://mongo-db-backend-production.up.railway.app/admin");
 
 //     socket.current.on("connect", () => {
 //       console.log("Connected to WebSocket server");
@@ -366,7 +366,7 @@
 // import axios from "axios";
 // import { io } from "socket.io-client";
 
-// const socket = io("http://localhost:5005"); // Update to your backend WebSocket server if different
+// const socket = io("mongo-db-backend-production.up.railway.app"); // Update to your backend WebSocket server if different
 
 // const ClientLocation = ({ onDriverSelect }) => {
 //   const [drivers, setDrivers] = useState([]);
@@ -375,7 +375,7 @@
 //   useEffect(() => {
 //     const fetchDrivers = async () => {
 //       try {
-//         const { data } = await axios.get("http://localhost:5005/api/users/public/drivers");
+//         const { data } = await axios.get("https://mongo-db-backend-production.up.railway.app/api/users/public/drivers");
 //         setDrivers(data);
 //       } catch (err) {
 //         console.error("Error fetching drivers:", err);
@@ -613,7 +613,7 @@
 //     const checkConnection = async () => {
 //       try {
 //         const res = await axios.get(
-//           `http://localhost:5005/api/client/check-connection/${clientId}`
+//           `https://mongo-db-backend-production.up.railway.app/api/client/check-connection/${clientId}`
 //         );
 
 //         if (res.data && res.data.driver && res.data.driver._id) {
@@ -800,7 +800,7 @@ const ClientLocation = () => {
   useEffect(() => {
     const checkDriverConnection = async () => {
       try {
-        const res = await axios.get(`http://localhost:5005/api/client/check-connection/${clientId}`);
+        const res = await axios.get(`https://mongo-db-backend-production.up.railway.app/api/client/check-connection/${clientId}`);
         if (res.data && res.data.driver && res.data.driver._id) {
           const driver = res.data.driver;
           setDriverInfo(driver);
@@ -950,7 +950,7 @@ export default ClientLocation;
 //   useEffect(() => {
 //     const checkDriverConnection = async () => {
 //       try {
-//         const res = await axios.get(`http://localhost:5005/api/client/check-connection/${clientId}`);
+//         const res = await axios.get(`https://mongo-db-backend-production.up.railway.app/api/client/check-connection/${clientId}`);
 //         const driver = res.data?.driver;
 
 //         if (driver && driver._id) {
@@ -1206,7 +1206,7 @@ export default ClientLocation;
 //     }
 
 //     // Connect socket
-//     socket.current = io("http://localhost:5005"); // Ensure this matches your backend port
+//     socket.current = io("mongo-db-backend-production.up.railway.app"); // Ensure this matches your backend port
 
 //     socket.current.on("connect", () => {
 //       console.log("Connected to WebSocket server");
@@ -1227,7 +1227,7 @@ export default ClientLocation;
 //   useEffect(() => {
 //     const fetchDrivers = async () => {
 //       try {
-//         const res = await axios.get("http://localhost:5005/api/users/public/drivers");
+//         const res = await axios.get("https://mongo-db-backend-production.up.railway.app/api/users/public/drivers");
 //         setDrivers(res.data);
 //       } catch (err) {
 //         console.error("Failed to fetch drivers:", err);

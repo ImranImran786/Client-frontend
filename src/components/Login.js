@@ -11,7 +11,7 @@ const Login = () => {
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
   //   try {
-  //     const { data } = await axios.post("http://localhost:5005/api/auth/login", {
+  //     const { data } = await axios.post("https://mongo-db-backend-production.up.railway.app/api/auth/login", {
   //       email,
   //       password,
   //     });
@@ -31,7 +31,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:5005/api/auth/login", {
+      const { data } = await axios.post("https://mongo-db-backend-production.up.railway.app/api/auth/login", {
         email,
         password,
       });

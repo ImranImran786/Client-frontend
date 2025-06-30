@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5005/");
+const socket = io("https://mongo-db-backend-production.up.railway.app/");
 
 const Client = () => {
   const [imageURL, setImageURL] = useState(null);

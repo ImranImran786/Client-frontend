@@ -17,7 +17,7 @@
 //     useEffect(() => {
 //         const fetchClientData = async () => {
 //             try {
-//                 const { data } = await axios.get(`http://localhost:5005/api/users/${userId}`, {
+//                 const { data } = await axios.get(`https://mongo-db-backend-production.up.railway.app/api/users/${userId}`, {
 //                     headers: {
 //                         Authorization: `Bearer ${token}`,
 //                     },
@@ -110,7 +110,7 @@ const Dashboard = () => {
 
         const fetchClientData = async () => {
             try {
-                const { data } = await axios.get(`http://localhost:5005/api/users/${userId}`, {
+                const { data } = await axios.get(`https://mongo-db-backend-production.up.railway.app/api/users/${userId}`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
