@@ -31,7 +31,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("https://mongo-db-backend-production.up.railway.app/api/auth/login", {
+      const { data } = await axios.post("https://database-production-3a68.up.railway.app/api/auth/login", {
         email,
         password,
       });
