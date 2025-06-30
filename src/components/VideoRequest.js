@@ -10,7 +10,7 @@
 //   const [driverId, setDriverId] = useState("");
 
 //   useEffect(() => {
-//     socket.current = io("https://mongo-db-backend-production.up.railway.app/", { transports: ["websocket", "polling"] });
+//     socket.current = io("https://database-production-3a68.up.railway.app/", { transports: ["websocket", "polling"] });
 //     socket.current.emit("register_client", userEmail);
 //     console.log(`📌 Client registered: ${userEmail}`);
 
@@ -122,7 +122,7 @@ const VideoVerification = ({ userEmail }) => {
   const [driverId] = useState("driver123"); // Automatically set to "driver123"
 
   useEffect(() => {
-    socket.current = io("https://mongo-db-backend-production.up.railway.app/", { transports: ["websocket", "polling"] });
+    socket.current = io("https://database-production-3a68.up.railway.app/", { transports: ["websocket", "polling"] });
     socket.current.emit("register_client", userEmail);
     console.log(`📌 Client registered: ${userEmail}`);
 
@@ -225,7 +225,7 @@ export default VideoVerification;
 //   useEffect(() => {
 //     const checkDriverConnection = async () => {
 //           try {
-//             const res = await axios.get(`https://mongo-db-backend-production.up.railway.app/api/client/check-connection/${clientId}`);
+//             const res = await axios.get(`https://database-production-3a68.up.railway.app/api/client/check-connection/${clientId}`);
 //             if (res.data && res.data.driver && res.data.driver._id) {
 //               const driver = res.data.driver;
 //               setDriverInfo(driver);
@@ -243,7 +243,7 @@ export default VideoVerification;
 //       }, [clientId]);
 
 //   const initializeSocket = (driverId) => {
-//     socket.current = io("mongo-db-backend-production.up.railway.app", { transports: ["websocket", "polling"] });
+//     socket.current = io("https://database-production-3a68.up.railway.app", { transports: ["websocket", "polling"] });
 
 //     socket.current.on("connect", () => {
 //       console.log("✅ Client connected to WebSocket server");
