@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 
-const socket = io("ws:https://mongo-db-backend-production.up.railway.app/", { reconnection: true });
+const socket = io("ws:https://database-production-3a68.up.railway.app/", { reconnection: true });
 
 socket.on("connect", () => {
     console.log("Connected to WebSocket Server");
