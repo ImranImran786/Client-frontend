@@ -1,0 +1,61 @@
+.driver-location-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.location-title {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: center; /* Center the heading */
+}
+
+.not-connected {
+  color: red;
+  font-weight: 500;
+  text-align: left; /* Align text left */
+}
+
+.driver-info-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 16px;
+  text-align: left; /* Align text left */
+}
+
+.location-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  text-align: left; /* Align list items left */
+}
+
+.map-container {
+  height: 60vh;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .driver-info-card {
+    font-size: 14px;
+  }
+
+  .location-title {
+    font-size: 20px;
+  }
+}
