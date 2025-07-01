@@ -1,4 +1,4 @@
-// this code is set only click buton then display live video of driver 
+
 import React, { useEffect, useRef, useState } from "react";
 import io from "socket.io-client";
 import "./VideoVerification.css"; // Import the CSS file
